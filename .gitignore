@@ -1,0 +1,3 @@
+# Ignores compiled TypeScript files
+**/wwwroot/app/**/*.map
+**/wwwroot/app/**/*.js
