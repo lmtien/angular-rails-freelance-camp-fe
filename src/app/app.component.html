@@ -1,28 +1,27 @@
 <nav class="navbar fixed-top navbar-light bg-faded">
-    <ul class="navbar-nav flex-row">
-        <li class="nav-item p-2">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item p-2">
-            <a class="nav-link" routerLink="/documents" routerLinkActive="active">Docs</a>
-        </li>
-        <li class="nav-item p-2 dropdown">
-            <div ngbDropdown class="d-inline-block dropdown-links">
-                <button class="btn btn-outline-primary" id="proposalDropdown" ngbDropdownToggle>
-                    Proposals
-                </button>
-                <div class="dropdown-menu" aria-labelledby="proposalDropdown">
-                    <a class="dropdown-item" routerLink="/proposals" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Proposals</a>
-                    <a class="dropdown-item" routerLink="/proposals/new" routerLinkActive="active">New Proposal</a>
+    <div class="container">
+        <ul class="navbar-nav flex-row">
+            <li class="nav-item p-2">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item p-2">
+                <a class="nav-link" routerLink="/documents" routerLinkActive="active">Docs</a>
+            </li>
+            <li class="nav-item p-2 dropdown">
+                <div ngbDropdown class="d-inline-block dropdown-links">
+                    <button class="btn btn-outline-primary" id="proposalDropdown" ngbDropdownToggle>
+                        Proposals
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="proposalDropdown">
+                        <a class="dropdown-item" routerLink="/proposals" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Proposals</a>
+                        <a class="dropdown-item" routerLink="/proposals/new" routerLinkActive="active">New Proposal</a>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
 
-<h1>Navigation</h1>
-
-<a routerLink="/proposals">Proposals</a>
-<a routerLink="/proposals/new">New Proposal</a>
-
-<router-outlet></router-outlet>
+<div class="app-body">
+    <router-outlet></router-outlet>
+</div>
