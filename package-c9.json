@@ -1,7 +1,7 @@
 {
   "name": "freelance-camp-fe",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Front-end app using Angular",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
@@ -20,8 +20,12 @@
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "heroku",
+    "angular"
+  ],
+  "author": "Tien Le",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~4.0.0",
@@ -57,5 +61,8 @@
     "@types/node": "^6.0.46",
     "@types/jasmine": "2.5.36"
   },
-  "repository": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmtien/angular-rails-freelance-camp-fe.git"
+  }
 }
