@@ -15,6 +15,7 @@
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor protractor.config.js",
     "pretest": "npm run build",
+    "postinstall": "npm run typings && npm run compile",
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
@@ -37,7 +38,10 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+
+    "typescript": "~2.1.0",
+    "concurrently": "^3.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
