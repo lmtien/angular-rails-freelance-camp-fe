@@ -7,7 +7,7 @@ import { Document } from './document';
 @Injectable()
 
 export class DocumentService {
-  private documentsUrl = 'http://angular-leaner-tiduslmt.c9users.io:8081/freelance_documents.json';
+  private documentsUrl = 'https://freelance-camp-docs.herokuapp.com/freelance_documents';
 
   constructor(
     private http: Http

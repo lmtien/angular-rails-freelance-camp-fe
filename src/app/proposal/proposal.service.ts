@@ -7,7 +7,7 @@ import { Proposal } from './proposal';
 @Injectable()
 
 export class ProposalService {
-  private proposalsUrl = 'http://angular-leaner-tiduslmt.c9users.io:8082/proposals';
+  private proposalsUrl = 'https://freelance-camp-proposal.herokuapp.com/proposals';
 
   constructor(
     private http: Http
