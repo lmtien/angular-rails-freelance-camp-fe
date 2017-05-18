@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-md-6">
             <h1>Create a Proposal</h1>
-    
+
             <div>
-                <form #proposalForm="ngForm">
+                <form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm">
                     <div class="form-group">
                         <label for="customer">Customer Name</label>
                         <input type="text"
@@ -21,7 +21,7 @@
                             Customer name is required
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="portfolio_url">Portfolio URL</label>
                         <input type="text"
@@ -37,7 +37,7 @@
                             A Portfolio URL is required
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="tools">Tools that you'll use on the project</label>
                         <input type="text"
@@ -54,7 +54,7 @@
                             A list of tools is required
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="estimated_hours">Estimated hours</label>
                         <input type="number"
@@ -70,7 +70,7 @@
                             You need to enter your estimated hours for the project
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="hourly_rate">Hourly rate</label>
                         <div class="input-group">
@@ -89,7 +89,7 @@
                             You need to enter your hourly rate for the project
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="weeks_to_complete">Weeks to Complete</label>
                         <input type="number"
@@ -105,7 +105,7 @@
                             You need to enter the weeks you estimate to complete the project
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="client_email">Client Email <em>(Optional)</em></label>
                         <input type="email"
@@ -117,10 +117,18 @@
                                 [(ngModel)]="proposal.client_email"
                         />
                     </div>
+
+                    <button type="submit"
+                            class="btn btn-outline-primary btn-lg"
+                            [disabled]="!proposalForm.form.valid"
+                            [hidden]="submitted"
+                    >
+                        Generate Proposal
+                    </button>
                 </form>
             </div>
         </div>
-        
+
         <div class="col-md-6 text-justify pt-3">
             <p>Hi {{ proposal.customer }},</p>
         	<p>It was a pleasure getting to meet with you and review your project requirements, I believe it is a great fit for the types of applications that I build out. Please feel free to check out some of my past projects <a href="{{ proposal.portfolio_url }}">here</a>.</p>
