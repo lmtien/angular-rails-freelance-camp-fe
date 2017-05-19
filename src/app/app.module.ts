@@ -1,6 +1,3 @@
-import { enableProdMode } from '@angular/core';
-enableProdMode();
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
